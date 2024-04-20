@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "./TodoProvider";
 
 let nextId = 4;

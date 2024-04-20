@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch, useTodos, Todo } from "./TodoProvider";
 
 export default function TodoList() {

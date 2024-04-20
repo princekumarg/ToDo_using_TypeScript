@@ -23,7 +23,7 @@ const initialTodos:Todo[]=[{
 ]
 
 const TodoContext=createContext<typeof initialTodos | null>(null);
-const TodoDispatchContext= createContext<React.Dispatch<Partial<Action>>> (()=>null);
+const TodoDispatchContext= createContext<React.Dispatch<Action> | null>(null);
 
 export  function TodoProvider({children,}: {children: React.ReactElement[];}){
     const [todos,dispatch]=useReducer(todosReducer,initialTodos);

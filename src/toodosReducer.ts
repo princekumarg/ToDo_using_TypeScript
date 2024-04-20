@@ -1,4 +1,4 @@
-import { Todo } from "./TodosProvider";
+import { Todo } from "./TodoProvider";
 
 export type Action =
   | {
