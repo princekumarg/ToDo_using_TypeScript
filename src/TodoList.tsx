@@ -27,7 +27,7 @@ function TodoElement({ todo }: TodoProp) {
         id={`${todo.id}`}
         checked={todo.done}
         onChange={(e) =>
-          dispatch({
+          dispatch && dispatch({
             type: "change",
             todo: {
               ...todo,
@@ -39,7 +39,7 @@ function TodoElement({ todo }: TodoProp) {
       {todo.text}
       <button
         onClick={() => {
-          dispatch({ type: "remove", id: todo.id });
+          dispatch && dispatch({ type: "remove", id: todo.id });
         }}
       >
         X

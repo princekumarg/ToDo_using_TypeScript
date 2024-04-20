@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "./TodoProvider";
 
 let nextId = 4;
@@ -17,11 +17,13 @@ export default function AddTodo() {
       />
       <button
         onClick={() => {
-          dispatch({
-            type: "add",
-            id: nextId++,
-            text,
-          });
+          if (dispatch) {
+            dispatch({
+              type: "add",
+              id: nextId++,
+              text,
+            });
+          }
         }}
       >
         Add
